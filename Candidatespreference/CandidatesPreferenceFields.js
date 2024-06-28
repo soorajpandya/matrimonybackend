@@ -1,0 +1,63 @@
+const Joi = require('joi');
+
+const candidatePreferenceFields = Joi.object({
+    candidateId: Joi.string().required(),
+    gender: Joi.string().required(),
+    candidateName: Joi.string().required(),
+    surname: Joi.string().required(),
+    originalSurname: Joi.string().required(),
+    nativePlace: Joi.string().required(),
+    fatherName: Joi.string().required(),
+    motherName: Joi.string().required(),
+    age: Joi.string().required(),
+    mobileNumber: Joi.string().required(),  // Assuming mobile numbers are 10 digits
+    parentContactNumbers: Joi.string().required(),
+    candidateEmail: Joi.string().required(),
+    educationalQualification: Joi.string().required(),
+    mediumOfQualification: Joi.string().required(),
+    house: Joi.string().required(),
+    houseAddress: Joi.string().required(),
+    city: Joi.string().required(),
+    pincode: Joi.string().required(),  // Assuming pincode is 6 digits
+    state: Joi.string().required(),
+    stayingIn: Joi.string().required(),
+    country: Joi.string().required(),
+    dateOfBirth: Joi.string().required(),
+    timeOfBirth: Joi.string().required(),
+    placeOfBirth: Joi.string().required(),
+    maritalStatus: Joi.string().required(),
+    mangalStatus: Joi.string().required(),
+    shaniStatus: Joi.string().required(),
+    work: Joi.string().required(),
+    detailsOfWork: Joi.string().required(),
+    personalIncome: Joi.string().required(),
+    familyIncome: Joi.string().required(),
+    officeWork: Joi.string().required(),
+    height: Joi.string().required(),
+    weight: Joi.string().required(),
+    complexion: Joi.string().required(),
+    bloodGroup: Joi.string().required(),
+    thalassemia: Joi.string().required(),
+    familyMembers: Joi.string().required(),
+    numberOfMarriedSiblings: Joi.string().required(),
+    numberOfUnmarriedSiblings: Joi.string().required(),
+    yourPositionAmongSiblings: Joi.string().required(),
+    numberOfFamilyMembersEarning: Joi.string().required(),
+    diet: Joi.string().required(),
+    hobbies: Joi.string().required(),
+    qualityOfYourPartner: Joi.string().required(),
+    wishToGoAbroadAfterMarriageIfRequired: Joi.string().required(),
+    country: Joi.string().required(),
+    state: Joi.string().required(),
+    city: Joi.string().required(),
+    abroadHouseAddress: Joi.string().allow(null, ''),
+    abroadCity: Joi.string().allow(null, ''),
+    abroadState: Joi.string().allow(null, ''),
+    abroadCountry: Joi.string().allow(null, ''),
+    permanentAddress : Joi.string().required()
+    
+});
+
+module.exports = {
+    candidatePreferenceFields,
+}
